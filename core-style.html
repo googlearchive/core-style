@@ -247,6 +247,12 @@ Polymer('core-style', {
     this.refMap[this.ref].push(this);
   },
 
+  applyRef: function(ref) {
+    this.ref = ref;
+    this.registerRef(this.ref);
+    this.require();
+  },
+
   require: function() {
     var cssText = this.cssTextForRef(this.ref);
     //console.log('require', this.ref, cssText);
@@ -280,7 +286,7 @@ Polymer('core-style', {
         cssText = s$.cssText;
       }
     }
-    if (!cssText) {
+    if (s$ && !cssText) {
       console.warn('No styles provided for ref:', ref);
     }
     return cssText;
