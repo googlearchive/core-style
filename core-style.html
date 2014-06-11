@@ -317,10 +317,10 @@ Polymer('core-style', {
     var host = this.findHost(this);
     if (host) {
       var name = host.localName;
-      var style = document.querySelector('style[' + name + ']');
+      var style = document.querySelector('style[' + name + '=' + this.ref +']');
       if (!style) {
         style = document.createElement('style');
-        style.setAttribute(name, '');
+        style.setAttribute(name, this.ref);
         document.head.appendChild(style);
       }
       return style;
