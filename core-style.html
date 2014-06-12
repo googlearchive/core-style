@@ -10,8 +10,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 The `core-style` element helps manage styling inside other elements and can 
 be used to make themes. The `core-style` element can be either a producer 
-of consumer of styling. If it has its `id` property set, it's a producer. 
-Elements that are produces should include css styling as their text content.
+or consumer of styling. If it has its `id` property set, it's a producer. 
+Elements that are producers should include css styling as their text content.
 If a `core-style` has its `ref` property set, it's a consumer. A `core-style`
 typically sets its `ref` property to the value of the `id` property of the
 `core-style` it wants to use. This allows a single producer to be used in 
