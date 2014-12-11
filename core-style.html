@@ -133,8 +133,15 @@ Polymer('core-style', {
     ref: ''
   },
 
-  // static
+  /**
+   * The `g` object is a reference to the global CoreStyle.g object which
+   * can be used to store any global style constants.
+   * 
+   * @attribute g
+   * @type Object
+   */
   g: CoreStyle.g,
+
   refMap: CoreStyle.refMap,
 
   /**
